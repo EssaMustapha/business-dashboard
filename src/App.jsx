@@ -1,11 +1,13 @@
+// src/App.jsx
 import React from 'react';
+import MainLayout from './components/MainLayout';
 
 function App() {
   return (
-    <div>
-      <h1>Business Dashboard</h1>
-      <p>Welcome to your new project! Let’s start building.</p>
-    </div>
+    <MainLayout>
+      <h2>Welcome to Your Business Dashboard!</h2>
+      <p>This is the starting point. We’ll add more features here step by step.</p>
+    </MainLayout>
   );
 }
 
