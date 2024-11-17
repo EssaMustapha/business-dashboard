@@ -1,26 +1,20 @@
-// src/components/MainLayout.jsx
+
 import React from 'react';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
-const MainLayout = ({ children }) => {
-  return (
-    <div style={styles.container}>
-      <Header />
-      <div style={styles.content}>{children}</div>
-    </div>
-  );
-};
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100vh',
-  },
-  content: {
-    flex: 1,
-    padding: '20px',
-  },
-};
+const MainLayout = ({ children }) => (
+  <div className="container">
+    <Header />
+    <nav>
+      <Link to="/">Overview</Link>
+      <Link to="/income">Income</Link>
+      <Link to="/expenses">Expenses</Link>
+      <Link to="/reports">Reports</Link>
+      <Link to="/dashboard">Dashboard</Link>
+    </nav>
+    <div>{children}</div>
+  </div>
+);
 
 export default MainLayout;
